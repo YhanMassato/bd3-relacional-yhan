@@ -1,5 +1,5 @@
-create database db_centro_cirurgico;
-use db_centro_cirurgico;
+/*create database db_centro_cirurgico;
+use db_centro_cirurgico;*/
 
 create table tb_especialidades(
 	id_especilidade int unsigned auto_increment primary key,
@@ -22,8 +22,7 @@ create table tb_medico(
     nome_medico varchar(200) not null,
     telefone_medico char(10),
 	celular_medico char(11) not null,
-    email_medico varchar(200) not null/*,
-    foreign key(id_medico) references tb_especilidade(id_especialidade)*/
+    email_medico varchar(200) not null
     );
 
 create table tb_insumos(
@@ -31,16 +30,12 @@ create table tb_insumos(
     id_paciente int not null,
     nome_insumo varchar(100) not null,
     quantidade_insumo decimal(10,2)
-    
-   /* foreign key(id_paciente) references tb_paciente(id_paciente)*/
 );
 
 create table tb_sala(
 	id_sala int unsigned auto_increment primary key,
-	especialidade_sala int not null,
-    nmr_sala varchar(10)
-    
-    
+	id_especialidade int not null,
+    nmr_sala varchar(10) not null
 );
 
 create table tb_agenda(
@@ -50,6 +45,4 @@ create table tb_agenda(
     id_paciente int not null,
     data_cirurgia datetime,
 	status_cirurgia enum('agendado', 'concluido', 'cancelado')
-    
-    
 );
