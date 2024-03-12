@@ -1,7 +1,7 @@
 use db_centro_cirurgico;
 
 alter table tb_medico add constraint fk_espec
-foreign key(id_medico) references tb_espec(id_espec);
+foreign key(id_espec) references tb_espec(id_espec);
 
 alter table tb_insumos add constraint fk_insumos
 foreign key(id_insumo) references tb_paciente(id_paciente);

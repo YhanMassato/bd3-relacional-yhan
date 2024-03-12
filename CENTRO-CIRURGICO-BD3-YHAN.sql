@@ -1,4 +1,4 @@
-create database db_centro_cirurgico;
+drop database db_centro_cirurgico;
 use db_centro_cirurgico;
 
 create table tb_espec(
