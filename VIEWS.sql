@@ -46,7 +46,6 @@ inner join tb_paciente tp
 on tp.id_paciente = ta.id_paciente;
 #####################################
 
-select * from vw_agenda_completa;
 
 
 

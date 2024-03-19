@@ -1,4 +1,4 @@
-drop database db_centro_cirurgico;
+create database db_centro_cirurgico;
 use db_centro_cirurgico;
 
 create table tb_espec(
@@ -14,6 +14,17 @@ create table tb_paciente(
     email_paciente varchar(200) not null,
     nome_responsavel_paciente varchar(200) not null,
     telefone_responsavel_paciente varchar(11) not null 
+);
+
+create table tb_paciente_bkp(
+	id_paciente int unsigned auto_increment primary key,
+    nome_paciente varchar(200) not null,
+    telefone_paciente char(10),
+	celular_paciente char(11) not null,
+    email_paciente varchar(200) not null,
+    nome_responsavel_paciente varchar(200) not null,
+    telefone_responsavel_paciente varchar(11) not null,
+    date_delete datetime default now() not null
 );
 
 create table tb_medico(
